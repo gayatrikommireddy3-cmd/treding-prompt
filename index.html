@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Prompts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-fire"></i> Trending Prompts</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search prompts...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+            <button class="filter-btn" data-filter="creative">Creative</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+        </div>
+
+        <div class="sort-options">
+            <label for="sortSelect">Sort by: </label>
+            <select id="sortSelect">
+                <option value="trending">Trending</option>
+                <option value="newest">Newest</option>
+                <option value="popular">Most Popular</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+        </div>
+
+        <div id="prompts-container" class="prompts-grid">
+            <!-- Prompts will be loaded here by JavaScript -->
+        </div>
+
+        <div class="load-more-container">
+            <button id="loadMoreBtn" class="load-more-btn">Load More</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Trending Prompts. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
